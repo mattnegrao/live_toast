@@ -235,7 +235,7 @@ export function createLiveToastHook(duration = 6000, maxItems = 3) {
       }
 
       let durationOverride = duration
-      if (this.el.dataset.duration !== undefined) {
+      if (this.el.dataset.duration !== undefined && this.el.dataset.component !== 'hideable-flash') {
         durationOverride = Number.parseInt(this.el.dataset.duration)
       }
 

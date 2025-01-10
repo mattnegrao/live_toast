@@ -126,10 +126,9 @@ defmodule LiveToast.Components do
     ~H"""
     <.toast
       :for={level <- @kinds}
-      data-component="flash"
+      data-component="hideable-flash"
       corner={@corner}
       toast_class_fn={@toast_class_fn}
-      duration={0}
       kind={level}
       title={String.capitalize(to_string(level))}
       phx-update="ignore"
